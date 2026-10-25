@@ -1,5 +1,7 @@
 # Daily Digest KB
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-3b3431?style=flat-square)](LICENSE)
+
 > A knowledge base that gives you an edge — built from a daily digest.
 
 A markdown-native template where an AI agent runs a **daily digest** and uses it
@@ -36,6 +38,41 @@ reads and acts on.
 3. **Knowledge** (`kb/`) — only durable, reusable insights get promoted here,
    routed by `MAP.md` and shaped by `templates/`.
 
+## Install
+
+You need an AI coding agent with file access (Claude Code, Codex CLI, Cursor,
+Gemini CLI, …).
+
+### With an AI agent
+
+Paste this into any coding agent with shell access:
+
+```text
+Set up Daily Digest KB from https://github.com/bgtvdm/daily-digest-kb.
+1. Clone it into a new folder named daily-digest-kb.
+2. Open that folder as the project, then read INSTRUCTIONS.md and follow it.
+3. Ask me whether to keep the AI / vibe-coding topic or switch the digest to
+   another domain (Research Focus in workflows/daily-ai-digest.md).
+```
+
+### By hand
+
+Click **Use this template** on GitHub, or copy the files without git history:
+
+```bash
+npx degit bgtvdm/daily-digest-kb my-digest-kb
+```
+
+No Node? `git clone https://github.com/bgtvdm/daily-digest-kb.git my-digest-kb`.
+
+Open the folder in your agent. `CLAUDE.md` (Claude Code) and `AGENTS.md` (Codex,
+Cursor, Gemini CLI, …) load on session start and point the agent to
+`INSTRUCTIONS.md`. Nothing else to install.
+
+**(Optional) Adapt the topic.** Edit `workflows/daily-ai-digest.md` →
+`Research Focus` and `Durable Alpha Sources` to your domain. Leave it as-is to
+run the AI / vibe-coding digest.
+
 ## Folder structure
 
 ```
@@ -57,50 +94,6 @@ reads and acts on.
     ├── patterns/  workflows/  prompts/
     ├── tools/     projects/   business/   reference/
 ```
-
-## Quick start
-
-You need an AI coding agent with file access (Claude Code, Codex CLI, Cursor,
-Gemini CLI, etc.).
-
-**1. Get the template.**
-
-**Let your agent install it** — paste this into any coding agent with shell
-access (Claude Code, Codex CLI, Cursor, Gemini CLI, …):
-
-```text
-Clone https://github.com/vibecodoor/daily-digest-kb.git into a new folder named
-daily-digest-kb, open that folder as the project, then read INSTRUCTIONS.md and
-follow it.
-```
-
-Or do it by hand:
-
-```bash
-# A) copy the files without git history (needs Node):
-npx degit vibecodoor/daily-digest-kb my-digest-kb
-
-# B) plain clone, no Node required:
-git clone https://github.com/vibecodoor/daily-digest-kb.git my-digest-kb
-```
-
-Then `cd my-digest-kb`.
-
-**2. Open it in your agent.** Open the folder as your project. `CLAUDE.md`
-(Claude Code) and `AGENTS.md` (Codex, Cursor, Gemini CLI, …) auto-load on session
-start and point the agent to `INSTRUCTIONS.md` — it knows the rest. Nothing else
-to install.
-
-**3. Or just tell your agent** — paste this on the first message:
-
-```text
-This project is an AI-operated knowledge base. Read INSTRUCTIONS.md and follow it.
-To produce today's digest, follow workflows/daily-ai-digest.md.
-```
-
-**(Optional) Adapt the topic.** Edit `workflows/daily-ai-digest.md` →
-`Research Focus` and `Durable Alpha Sources` to your domain. Leave it as-is to
-run the AI / vibe-coding digest.
 
 ## Running the daily digest — three ways
 
